@@ -1,0 +1,673 @@
+/*................. Start Global Rules .................*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../webfonts/Montserrat-Regular.woff), format("woff");
+  src: url(../webfonts/Montserrat-Regular.woff2), format("woff2");
+  src: url(../webfonts/Montserrat-Regular.ttf), format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../webfonts/Poppins-Regular.woff), format("woff");
+  src: url(../webfonts/Poppins-Regular.woff2), format("woff2");
+  src: url(../webfonts/Poppins-Regular.ttf), format("truetype");
+}
+
+:root {
+  --main-font: "Montserrat";
+  --second-font: "Poppins";
+  --main-color: #343434;
+  --main-color-rgb: 52, 52, 52;
+  --second-color: #748182;
+  --second-color-rgb: 116, 129, 130;
+  --light-color: #f7f7f7;
+  --light-color-rgb: 247, 247, 247;
+  --black-color: #000000;
+  --black-color-rgb: 0, 0, 0;
+  --white-color: #ffffff;
+  --white-color-rgb: 255, 255, 255;
+}
+
+.heading-title {
+  font-family: var(--main-font), sans-serif;
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  font-weight: 900;
+}
+.heading-title::after {
+  content: "";
+  width: 100%;
+  height: 1.875rem;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -0.8125rem;
+  left: 0;
+  z-index: -1;
+}
+
+.overlay {
+  background-color: var(--main-color);
+  opacity: 0.7;
+}
+
+/*................. End Global Rules .................*/
+
+/*................. Start Overriding Bootstrap .................*/
+.text-dark {
+  --bs-primary-rgb: var(--main-color-rgb);
+}
+.text-secondary {
+  --bs-secondary-rgb: var(--second-color-rgb);
+}
+.bg-light {
+  --bs-light-rgb: var(--light-color-rgb);
+}
+.bg-secondary {
+  --bs-secondary-rgb: var(--second-color-rgb);
+}
+.bg-dark {
+  --bs-dark-rgb: var(--black-color-rgb);
+}
+/*................. End Overriding Bootstrap .................*/
+
+/*................. Start Navbar .....................*/
+nav .n-text {
+  font-family: var(--main-font), sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 800;
+}
+nav .nav-link.active {
+  transition: all 0.5s ease-in-out;
+}
+nav .nav-link.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--black-color);
+  margin-top: 0.5rem;
+}
+.navbar.scrolled {
+  background-color: var(--light-color) !important;
+  transition: background-color 0.3s ease;
+}
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: var(--black-color) !important;
+}
+/*................. End Navbar .....................*/
+
+/*................. Start Header .................*/
+#home {
+  background-image: url(../images/bg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#home .overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+}
+#home .header-content h1 {
+  font-family: var(--main-font), sans-serif;
+  font-size: 3.125rem;
+  line-height: 3.4375rem;
+  font-weight: 800;
+}
+#home .header-content p .sp1,
+#home .header-content p .sp2 {
+  font-family: var(--main-font), sans-serif;
+  font-size: 3.75rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.25rem;
+}
+#home .header-content p .sp1 {
+  font-weight: 200;
+}
+#home .header-content p .sp2 {
+  font-weight: 400;
+}
+#home .header-content .annimation::after {
+  content: "|";
+  animation: typing 9s infinite;
+}
+@keyframes typing {
+  0% {
+    content: "L|";
+  }
+  1.7% {
+    content: "La|";
+  }
+  3.4% {
+    content: "Lar|";
+  }
+  5.1% {
+    content: "Larr|";
+  }
+  6.8% {
+    content: "Larry|";
+  }
+  8.5% {
+    content: "Larry |";
+  }
+  10.2% {
+    content: "Larry D|";
+  }
+  11.9% {
+    content: "Larry Da|";
+  }
+  13.6% {
+    content: "Larry Dan|";
+  }
+  15.3% {
+    content: "Larry Dani|";
+  }
+  17% {
+    content: "Larry Danie|";
+  }
+  18.7% {
+    content: "Larry Daniel|";
+  }
+  20.4% {
+    content: "Larry Daniels|";
+  }
+  22.1% {
+    content: "Larry Daniel|";
+  }
+  23.8% {
+    content: "Larry Danie|";
+  }
+  25.5% {
+    content: "Larry Dani|";
+  }
+  27.2% {
+    content: "Larry Dan|";
+  }
+  28.9% {
+    content: "Larry Da|";
+  }
+  30.6% {
+    content: "Larry D|";
+  }
+  32.3% {
+    content: "Larry |";
+  }
+  34% {
+    content: "Larry|";
+  }
+  35.7% {
+    content: "Larr|";
+  }
+  37.4% {
+    content: "Lar|";
+  }
+  39.1% {
+    content: "La|";
+  }
+  40.8% {
+    content: "L|";
+  }
+  42.5% {
+    content: "|";
+  }
+  44.2% {
+    content: "D|";
+  }
+  45.9% {
+    content: "De|";
+  }
+  47.6% {
+    content: "Dev|";
+  }
+  49.3% {
+    content: "Deve|";
+  }
+  51% {
+    content: "Devel|";
+  }
+  52.7% {
+    content: "Develo|";
+  }
+  54.4% {
+    content: "Develop|";
+  }
+  56.1% {
+    content: "Develope|";
+  }
+  57.8% {
+    content: "Developer|";
+  }
+  59.5% {
+    content: "Develop|";
+  }
+  61.2% {
+    content: "Develo|";
+  }
+  62.9% {
+    content: "Devel|";
+  }
+  64.6% {
+    content: "Deve|";
+  }
+  66.3% {
+    content: "Dev|";
+  }
+  68% {
+    content: "De|";
+  }
+  69.7% {
+    content: "D|";
+  }
+  71.4% {
+    content: "|";
+  }
+  73.1% {
+    content: "D|";
+  }
+  74.8% {
+    content: "De|";
+  }
+  76.5% {
+    content: "Des|";
+  }
+  78.2% {
+    content: "Desi|";
+  }
+  79.9% {
+    content: "Desig|";
+  }
+  81.6% {
+    content: "Design|";
+  }
+  83.3% {
+    content: "Designe|";
+  }
+  85% {
+    content: "Designer|";
+  }
+  86.7% {
+    content: "Designe|";
+  }
+  88.4% {
+    content: "Design|";
+  }
+  90.1% {
+    content: "Desig|";
+  }
+  91.8% {
+    content: "Desi|";
+  }
+  93.5% {
+    content: "Des|";
+  }
+  95.2% {
+    content: "De|";
+  }
+  96.9% {
+    content: "D|";
+  }
+  100% {
+    content: "|";
+  }
+}
+#home .social-icons span {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/*................. End Header .................*/
+
+/*................. Start About .................*/
+#about .about-img::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  left: -2rem;
+  bottom: -2rem;
+  z-index: -1;
+}
+#about .about-content h2 {
+  font-family: var(--main-font), sans-serif;
+  font-size: 1.875rem;
+  line-height: 2.0625rem;
+  font-weight: 800;
+}
+#about .about-content .sp1 {
+  color: rgb(153, 153, 153);
+  letter-spacing: 0.125rem;
+  font-family: var(--second-font), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+#about .about-content p {
+  font-family: var(--second-font), sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+#about .skill .progress {
+  height: 1.5625rem;
+  width: 100%;
+  padding-inline-end: 0.3125rem;
+  border-radius: 0.625rem;
+  background: var(--light-color-rgb);
+  box-shadow: 0rem 0.125rem 0.4375rem rgba(0, 0, 0, 0.15) inset;
+}
+#about .skill .progress-bar .head .sp {
+  font-family: var(--main-font), sans-serif;
+  font-size: 0.8125rem;
+  line-height: 0.875rem;
+  font-weight: 500;
+}
+#about .about-btns .btn1,
+#about .about-btns .btn2 {
+  font-family: var(--second-font), sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
+  font-weight: 400;
+  transition: all 0.4s ease-in-out;
+}
+#about .about-btns .btn1:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+/*................. End About .................*/
+
+/*................. Start Services .................*/
+#services .card .icon {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  background-color: rgb(244, 244, 244);
+  color: var(--black-color);
+  font-size: 1.75rem;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+#services .card:hover .icon {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+#services .card-content h3 {
+  font-family: var(--main-font), sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 800;
+}
+#services .card-content p {
+  font-family: var(--second-font), sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  word-spacing: 0.125rem;
+}
+/*................. End Services .................*/
+
+/*................. Start Portfolio .................*/
+#portfolio .card .overlay {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  background: rgba(255, 255, 255, 0.95);
+}
+#portfolio .card:hover .overlay {
+  opacity: 1;
+  border: 5px solid #d7d5d6;
+  border-radius: 0.25rem;
+}
+#portfolio .card .content h3 {
+  font-family: var(--main-font), sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.8125rem;
+  font-weight: 700;
+}
+#portfolio .card .icon i {
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.75rem;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-size: 0.875rem;
+  border-radius: 50%;
+  border: 1px solid var(--black-color);
+  transition: all 0.4s ease-in-out;
+}
+#portfolio .card .icon:hover i {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+#portfolio .nav-link {
+  font-family: var(--second-font), sans-serif;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  font-weight: 700;
+  color: rgb(34, 34, 34);
+  border: none;
+}
+#portfolio .nav-link.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--black-color);
+  margin-top: 0.5rem;
+}
+/*................. End Portfolio .................*/
+
+/*................. Start Testimonials .................*/
+#testimonials .carousel-indicators [data-bs-target] {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background-color: var(--second-color);
+  margin-top: 1rem;
+}
+#testimonials .carousel-item img {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+#testimonials .carousel-item p {
+  font-family: var(--second-font), sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+#testimonials .carousel-item h3 {
+  font-family: var(--main-font), sans-serif;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+}
+#testimonials .carousel-item span {
+  font-family: var(--second-font), sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.0625rem;
+  font-weight: 600;
+}
+/*................. End Testimonials .................*/
+
+/*................. Start Count .................*/
+#count .count-icon .icon {
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  font-weight: 400;
+}
+#count .count-number {
+  font-family: var(--main-font);
+  font-size: 1.875rem;
+  line-height: 2.0625rem;
+  font-weight: 900;
+}
+#count .count-content span {
+  font-family: var(--second-font), sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+/*................. End Count .................*/
+
+/*................. Start Team .................*/
+#team .container .card .card-footer {
+  background-color: rgba(52, 52, 52, 0.8);
+  margin-bottom: 0.625rem;
+}
+#team .card-layer {
+  position: absolute;
+  top: 7rem;
+  left: 6.25rem;
+  right: 6.25rem;
+  bottom: 12.6875rem;
+  opacity: 0;
+  transition: all 0.5s;
+  background-color: var(--white-color);
+  transform: rotateY(180deg) scale(1.2, 1.2);
+}
+
+#team .card:hover .card-layer {
+  position: absolute;
+  text-align: center;
+  opacity: 0.9 !important;
+  transform: rotateY(0deg) scale(1.9, 2);
+}
+
+#team .card-image img {
+  transition: all 0.4s;
+  transform-origin: center bottom;
+}
+
+#team .card-image:hover img {
+  transform: scale(1.1, 1.1);
+}
+
+#team .card:hover .card-layer .icon i {
+  font-size: 0.625rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.125rem;
+  border-radius: 50%;
+  border: 1px solid #111;
+  background: #111;
+  color: #eee;
+}
+
+#team .container .card-layer .icon {
+  text-align: center;
+  padding: 0.1875rem;
+}
+
+#team .container .card-layer .icon i {
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  border-radius: 50%;
+  border: 0.0625rem solid #111;
+  background: #111;
+  color: #eee;
+}
+
+#team .container .card-layer .icon a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+#team .container .card-layer .icon:hover i {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+#team .container .card-footer h4 {
+  font-family: var(--main-font), sans-serif;
+  font-weight: 500;
+  font-size: 1.5625rem;
+  line-height: 1.7188rem;
+  color: var(--white-color);
+}
+
+#team .container .card-footer h5 {
+  font-family: var(--main-font), sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.375rem;
+  color: var(--white-color);
+}
+/*................. End Team .................*/
+
+/*................. Start Contact .................*/
+#contact .card-icon .icon {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  background-color: rgb(244, 244, 244);
+  color: var(--black-color);
+  font-size: 1.5625rem;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+#contact .card-icon:hover .icon {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+#contact .card-content h3 {
+  font-family: var(--main-font), sans-serif;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+#contact .card-content p {
+  font-family: var(--second-font), sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+#contact form .btng button {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  transition: all 0.5s ease-in-out;
+}
+#contact form .btng:hover button {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: 0.0625rem solid var(--black-color);
+}
+/*................. End Contact .................*/
+
+/*................. Start Footer .................*/
+footer {
+  background-color: #1c1c1c;
+  font-family: var(--second-font), sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.3125rem;
+  font-weight: 400;
+}
+/*................. End Footer .................*/
+
+/* .................Start Media Query ................. */
+/* Small Screen */
+@media screen and (min-width: 576px) {
+}
+/* Medium Screen */
+@media screen and (min-width: 768px) {
+}
+/* Large Screen */
+@media screen and (min-width: 992px) {
+}
+
+/* Extra Large Screen */
+@media screen and (min-width: 1200px) {
+}
+
+/* .................End Media Query ................. */
